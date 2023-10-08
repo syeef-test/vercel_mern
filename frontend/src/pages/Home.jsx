@@ -14,7 +14,7 @@ function Home() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://vercel-mern-bookstore-server.vercel.app:3000/books"
+          "https://vercel-mern-bookstore-server.vercel.app/books"
         );
         setBooks(response.data.data);
         setLoading(false); // Set loading to false after fetching data
