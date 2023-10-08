@@ -13,7 +13,9 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:3000/books");
+        const response = await axios.get(
+          "https://vercel-mern-bookstore-server.vercel.app:3000/books"
+        );
         setBooks(response.data.data);
         setLoading(false); // Set loading to false after fetching data
       } catch (error) {
