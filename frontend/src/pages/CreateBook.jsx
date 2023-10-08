@@ -20,7 +20,10 @@ const CreateBook = () => {
       };
       setLoading(true);
 
-      const response = await axios.post("http://127.0.0.1:3000/books", data);
+      const response = await axios.post(
+        "https://vercel-mern-bookstore-server.vercel.app/books",
+        data
+      );
       setLoading(false);
       navigate("/");
     } catch (error) {

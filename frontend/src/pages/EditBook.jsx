@@ -16,7 +16,9 @@ const EditBook = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://127.0.0.1:3000/books/${id}`);
+        const response = await axios.get(
+          `https://vercel-mern-bookstore-server.vercel.app/books/${id}`
+        );
         setAuthor(response.data.data.author);
         setTitle(response.data.data.title);
         setPublishYear(response.data.data.publishYear);
@@ -41,7 +43,7 @@ const EditBook = () => {
       setLoading(true);
 
       const response = await axios.put(
-        `http://127.0.0.1:3000/books/${id}`,
+        `https://vercel-mern-bookstore-server.vercel.app/books/${id}`,
         data
       );
       setLoading(false);

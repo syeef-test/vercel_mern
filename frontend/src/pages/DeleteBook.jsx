@@ -12,7 +12,9 @@ function DeleteBook() {
   const handleDeleteBook = async () => {
     try {
       setLoading(true);
-      await axios.delete(`http://127.0.0.1:3000/books/${id}`);
+      await axios.delete(
+        `https://vercel-mern-bookstore-server.vercel.app/books/${id}`
+      );
       setLoading(false);
       navigate("/");
     } catch (error) {

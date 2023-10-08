@@ -12,7 +12,9 @@ const ShowBook = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://127.0.0.1:3000/books/${id}`);
+      const response = await axios.get(
+        `https://vercel-mern-bookstore-server.vercel.app/books/${id}`
+      );
       setBook(response.data.data);
       setLoading(false);
     } catch (error) {
